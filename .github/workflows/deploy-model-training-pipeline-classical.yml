@@ -79,4 +79,4 @@ jobs:
       #   AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
       secrets:
           #creds: ${{secrets.AZURE_CREDENTIALS}}
-          creds: ${{secrets.Personal_AZURE_CREDENTIALS}}
+          creds: ${{secrets.AZURE_CREDENTIALS}}
