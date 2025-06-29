@@ -18,5 +18,5 @@ variables:
   ado_service_connection_aml_ws: Azure-ARM-Prod
 
   # For pipeline reference
-  resource_group: Prod-RG
-  aml_workspace: cboyd-aml
+  resource_group: default_resource_group
+  aml_workspace: FitwellWorkspace
