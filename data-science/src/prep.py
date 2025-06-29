@@ -23,7 +23,7 @@ def main():
     logging.info(f"Test-train ratio: {args.test_train_ratio}")
 
     # Reading Data
-    df = pd.read_csv(args.raw_data)
+    df = pd.read_csv(args.data)
 
     # Encode categorical feature
     le = LabelEncoder()

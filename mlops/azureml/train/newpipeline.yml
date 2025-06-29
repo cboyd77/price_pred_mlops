@@ -26,12 +26,12 @@ jobs:
     code: ../../../data-science/src
     command: >-
       python prep.py 
-      --raw_data ${{inputs.raw_data}} 
+      --data ${{inputs.data}} 
       --train_data ${{outputs.train_data}}
       --test_data ${{outputs.test_data}}
     environment: azureml:pima-train-env@latest
     inputs:
-      raw_data: ${{parent.inputs.input}}
+      data: ${{parent.inputs.input}}
     outputs:
       train_data: ${{parent.outputs.train_data}}
       test_data: ${{parent.outputs.test_data}}
@@ -70,9 +70,9 @@ jobs:
       --model_name ${{inputs.model_name}} 
       --model_path ${{inputs.model_path}} 
       --model_info_output_path ${{outputs.model_info_output_path}}
-    environment: azureml:pima-train-env@latest
+    environment: azureml:used-car-env@latest
     inputs:
-      model_name: "pima_classification_model"
+      model_name: "random_forest_model"
       model_path: ${{parent.jobs.sweep_step.outputs.model_output}}
     outputs:
       model_info_output_path: ${{parent.outputs.model_info_output_path}}
