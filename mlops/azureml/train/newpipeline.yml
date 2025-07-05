@@ -29,7 +29,7 @@ jobs:
       --data ${{inputs.data}} 
       --train_data ${{outputs.train_data}}
       --test_data ${{outputs.test_data}}
-    environment: azureml:pima-train-env@latest
+    environment: azureml:used-car-env@latest
     inputs:
       data: ${{parent.inputs.input}}
     outputs:
@@ -49,12 +49,15 @@ jobs:
     sampling_algorithm: random
     trial: ./train.yml  # Refers to a separate command component
     search_space:
-      max_depth:
+      n_estimators:
         type: choice
-        values: [1,3,5,10]
+        values: [10, 20, 30, 50]
+      max_depth:
+        type: _______  # Specify the type for max_depth
+        values: _______  # Provide the values for max_depth
     objective:
       goal: minimize
-      primary_metric: mse
+      primary_metric: MSE
     limits:
       max_total_trials: 20
       max_concurrent_trials: 10
