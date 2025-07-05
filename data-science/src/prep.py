@@ -45,4 +45,20 @@ def main():
     mlflow.end_run()
 
 if __name__ == "__main__":
-    main()
+    mlflow.start_run()
+
+    # Parse Arguments
+    args = parse_args()
+
+    lines = [
+        f"Data path: {args.data}",
+        f"Train dataset output path: {args.train_data}",
+        f"Test dataset path: {args.test_data}",
+        f"Test-train ratio: {args.test_train_ratio}",
+    ]
+
+    for line in lines:
+        print(line)
+    
+    main(args)
+    mlflow.end_run()

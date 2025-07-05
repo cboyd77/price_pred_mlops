@@ -20,4 +20,4 @@ command: >-
   --test_data ${{inputs.test_data}}
   --max_depth ${{inputs.max_depth}}
   --model_output ${{outputs.model_output}}
-environment: azureml:pima-train-env@latest
+environment: azureml:used-car-env@latest
