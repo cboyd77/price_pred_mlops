@@ -6,7 +6,7 @@ import mlflow
 import pandas as pd
 from pathlib import Path
 
-mlflow.start_run()  # Starting the MLflow experiment run
+#mlflow.start_run()  # Starting the MLflow experiment run
 
 def parse_args():
     '''Parse input arguments'''
@@ -42,4 +42,21 @@ def main(args):
     mlflow.end_run()  # ________ (Fill in the code to end the MLflow run)
 
 if __name__ == "__main__":
-    main()
+
+    mlflow.start_run()
+    
+    # Parse Arguments
+    args = parse_args()
+    
+    lines = [
+        f"Model name: {args.________}",
+        f"Model path: {args.________}",
+        f"Model info output path: {args.________}"
+    ]
+
+    for line in lines:
+        print(line)
+
+    main(args)
+
+    mlflow.end_run()
