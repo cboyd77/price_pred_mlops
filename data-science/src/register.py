@@ -15,7 +15,7 @@ def main():
     args = parser.parse_args()
 
     # Load the trained model from the provided path
-    model = mlflow.sklearn.load_model(args.model)  # _______ (Fill the code to load model from args.model)
+    model = mlflow.sklearn.load_model(Path(args.model))  # _______ (Fill the code to load model from args.model)
 
     print("Registering the best trained used cars price prediction model")
     
