@@ -8,7 +8,19 @@ from pathlib import Path
 
 mlflow.start_run()  # Starting the MLflow experiment run
 
-def main():
+def parse_args():
+    '''Parse input arguments'''
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--model_name', type=_____, help='Name under which model will be registered')  # Hint: Specify the type for model_name (str)
+    parser.add_argument('--model_path', type=_____, help='Model directory')  # Hint: Specify the type for model_path (str)
+    parser.add_argument("--model_info_output_path", type=_____, help="Path to write model info JSON")  # Hint: Specify the type for model_info_output_path (str)
+    args, _ = parser.parse_known_args()
+    print(f'Arguments: {args}')
+
+    return args
+
+def main(args):
     # Argument parser setup for command line arguments
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", type=str, help="Path to the trained model")  # Path to the trained model artifact
