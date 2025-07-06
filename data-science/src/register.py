@@ -49,9 +49,9 @@ if __name__ == "__main__":
     args = parse_args()
     
     lines = [
-        f"Model name: {args.________}",
-        f"Model path: {args.________}",
-        f"Model info output path: {args.________}"
+        f"Model name: {args.model_name}",
+        f"Model path: {args.model_path}",
+        f"Model info output path: {args.model_info_output_path}"
     ]
 
     for line in lines:
