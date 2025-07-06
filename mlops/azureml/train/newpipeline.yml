@@ -70,9 +70,7 @@ jobs:
     code: ../../../data-science/src
     command: >-
       python register.py 
-      --model_name ${{inputs.model_name}} 
-      --model_path ${{inputs.model_path}} 
-      --model_info_output_path ${{outputs.model_info_output_path}}
+      --model ${{inputs.model_name}} 
     environment: azureml:used-car-env@latest
     inputs:
       model_name: "random_forest_model"
