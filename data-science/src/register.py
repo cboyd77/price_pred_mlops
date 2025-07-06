@@ -27,7 +27,7 @@ def main(args):
     model = mlflow.sklearn.load_model(args.model_path)
     
     # Log model using mlflow
-     mlflow.sklearn.log_model(model, args.model_name)
+    mlflow.sklearn.log_model(model, args.model_name)
 
     # Register logged model using mlflow
     run_id = mlflow.active_run().info.run_id
