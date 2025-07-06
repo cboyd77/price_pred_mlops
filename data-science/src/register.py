@@ -5,6 +5,8 @@ import logging
 import mlflow
 import pandas as pd
 from pathlib import Path
+import json
+
 
 def parse_args():
     '''Parse input arguments'''
